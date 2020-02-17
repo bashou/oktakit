@@ -12,8 +12,8 @@ module Oktakit
       # @see https://developer.okta.com/docs/api/resources/users#create-user
       # @example
       #   Oktakit.create_user
-      def create_user(options = {})
-        post('/users', options)
+      def create_user(options = {}, activate = false)
+        post("/users?activate=#{activate}", options)
       end
 
       # Get User
